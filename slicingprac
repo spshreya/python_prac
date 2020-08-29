@@ -1,0 +1,11 @@
+'''to find the number after colon '''
+
+text = "X-DSPAM-Confidence:    0.8475";
+#find positin of col
+poscol= text.find(':')
+#slicing from after colon to the end
+rawnum=text[poscol+1:]
+#removing left white space also converting the string to float
+#rstrip for right lstrip for left and strip for both
+rawnum=float(rawnum.lstrip())
+print(rawnum)
