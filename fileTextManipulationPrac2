@@ -4,16 +4,15 @@ When the program completes, sort and print the resulting words in alphabetical o
 You can download the sample data at http://www.py4e.com/code3/romeo.txt '''
 
 
-
-fn = input("Enter file name: ")
-fh = open(fn)
-y=[]
-for i in fh:
-    x=i.rstrip().split()
-    for j in range(len(x)):
-        if x[j] in y : continue
+fname = input("Enter file name: ")
+fhandle = open(fname)
+mainLst=[]
+for line in fh:
+    words=line.rstrip().split()
+    for word in range(len(words)):
+        if words[word] in mainLst : continue
         else:
-            y.append(x[j])
-y.sort()
-print(y)
+            mainLst.append(words[j])
+mainLst.sort()
+print(mainLst)
 
