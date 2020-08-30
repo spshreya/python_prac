@@ -1,5 +1,25 @@
+#program1
 fhand= open('mail.txt')
 for lines in fhand:
   lines = lines.rstrip() #bec print adds a \n after every line and we already have one
   if lines.startswith('From:')
   print(lines)
+
+
+#program2
+'''Count these lines and extract the floating point values from each of the lines and compute the average of those values and produce an output as shown below. Do not use the sum() function or a variable named sum in your solution.
+You can download the sample data at http://www.py4e.com/code3/mbox-short.txt when you are testing below enter mbox-short.txt as the file name. '''
+fn=input()
+fh=open(fn)
+c=0
+s=0
+for i in fh:
+    if i.startswith('X-DSPAM-Confidence:'):
+        c+=1
+        x=i.find(':')
+        k=i[x+1:]
+        d=float(k.rstrip())
+        s=s+d
+    
+avg=s/c
+print('Average spam confidence:',avg)
