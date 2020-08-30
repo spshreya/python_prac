@@ -1,0 +1,5 @@
+fhand= open('mail.txt')
+for lines in fhand:
+  lines = lines.rstrip() #bec print adds a \n after every line and we already have one
+  if lines.startswith('From:')
+  print(lines)
