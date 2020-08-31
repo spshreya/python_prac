@@ -10,7 +10,7 @@ handle = open(name)
 addlst=[]
 addcount=dict()
 for i in handle:
-    if i.startswith('From'):
+    if i.startswith('From '):
         lst=i.rstrip().split()
         addlst.append(lst[1])
         
